@@ -21,4 +21,20 @@
 #     for line in file:
 #         print("hello,", line.rstrip())
 
+
+# read in the file
+# load into memory first before you can sort
 names = []
+
+with open("names.txt") as file:
+    for line in file:
+        names.append(line.rstrip())
+
+for name in sorted(names):
+    print(f"hello, {name}")
+
+
+# Simpler version of above block
+# with open("names.txt") as file:
+#     for line in sorted(file):
+#         print("hello,", line.rstrip())
