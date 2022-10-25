@@ -34,12 +34,29 @@ students = []
 #     print(f"{student['name']} is in {student['house']}")
 
 
+# read csv
+# with open("students.csv") as file:
+#     reader = csv.DictReader(file)   # Read each row in as a dictionary
+#     for row in reader:
+#         students.append({"name": row["name"], "home": row["home"]})
+#
+# # lambda function == get_name(), this is an anonymous function
+# for student in sorted(students, key=lambda student: student["name"]):
+#     print(f"{student['name']} is from {student['home']}")
 
-with open("students.csv") as file:
-    reader = csv.DictReader(file)   # Read each row in as a dictionary
-    for row in reader:
-        students.append({"name": row["name"], "home": row["home"]})
+# # write to csv
+# name = input("What's your name? ")
+# home = input("Where's your home? ")
+#
+# with open("students.csv", "a") as file:
+#     writer = csv.writer(file)
+#     writer.writerow([name, home])
+#
 
-# lambda function == get_name(), this is an anonymous function
-for student in sorted(students, key=lambda student: student["name"]):
-    print(f"{student['name']} is from {student['home']}")
+# write to csv using DictWriter
+name = input("What's your name? ")
+home = input("Where's your home? ")
+
+with open("students.csv", "a") as file:
+    writer = csv.DictWriter(file, fieldnames=["name", "home"])
+    writer.writerow({"name": name, "home": home})
