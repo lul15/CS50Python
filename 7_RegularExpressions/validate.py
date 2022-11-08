@@ -3,11 +3,24 @@ import re
 
 email = input("What's your email? ").strip()
 
-if re.search(r".+@.+\.edu", email):
+
+
+
+# 4th iteration - built in, utilizing the alphanumeric
+# passed flag for case-insensitivity
+# part of the substring optional  (?)
+if re.search(r"^\w+@(\w+\.)?\w+\.(com|edu|gov|net|org)$", email, re.IGNORECASE):
     print("Valid")
 else:
     print("Invalid")
 
+
+# # 3rd iteration - specify beginning and end
+# # then specify the letters allowed
+# if re.search(r"^[a-zA-Z-9_]+@[a-zA-Z-9_]+\.edu$", email):
+#     print("Valid")
+# else:
+#     print("Invalid")
 
 
 # # 2nd iteration
