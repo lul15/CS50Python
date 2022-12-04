@@ -27,7 +27,7 @@ def test_edge_case():
 def test_edge_case2():
     assert (convert("12 AM to 12 PM")) == "00:00 to 12:00"
 
-
+# TODO - combine tests
 def test_value_error():
     with pytest.raises(ValueError):
         convert("9:60 AM to 5:60 PM")
