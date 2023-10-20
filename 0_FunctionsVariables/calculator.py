@@ -2,11 +2,12 @@ def main():
     x = int(input("What's x? "))
     print("x squared is", square(x))
 
+
 def square(n):
     return n * n
 
-main()
 
+main()
 
 
 # ### 1st Approach
@@ -34,5 +35,3 @@ main()
 # # print(f"{z:,}") # automatic formatting with commas
 # print(f"{z:.2f}")   # using f string to print 2 decimal places
 #
-
-
