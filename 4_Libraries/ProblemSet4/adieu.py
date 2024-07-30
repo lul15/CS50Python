@@ -2,6 +2,7 @@ def main():
     names = get_names()
     print(print_lyrics(names))
 
+
 def get_names():
     names = []
     while True:
@@ -11,6 +12,7 @@ def get_names():
         except EOFError:
             break
     return names
+
 
 def print_lyrics(names):
     print("")
@@ -27,6 +29,7 @@ def print_lyrics(names):
 
     lyric = lyric + result
     return lyric
+
 
 if __name__ == "__main__":
     main()
